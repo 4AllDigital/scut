@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin scut-circle (
   $size,
   $color: inherit
@@ -10,7 +12,7 @@
     // If user wants to inherit the color,
     // take advantage of the fact that border
     // color defaults to the text color of the element.
-    border-width: $size / 2;
+    border-width: math.div($size, 2);
     border-style: solid;
     height: 0;
     width: 0;

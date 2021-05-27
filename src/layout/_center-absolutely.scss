@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin scut-center-absolutely (
   $dimensions
 ) {
@@ -10,13 +12,13 @@
   @if $width != n {
     width: $width;
     left: 50%;
-    margin-left: (-$width / 2);
+    margin-left: math.div(-$width, 2);
   }
 
   @if $height != n {
     height: $height;
     top: 50%;
-    margin-top: (-$height / 2);
+    margin-top: math.div(-$height, 2);
   }
 
 }
